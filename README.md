@@ -1,6 +1,10 @@
 # Elbow
 
-TODO: Write a gem description
+Elbow is a Capistrano plugin for deploying to an AWS Elastic Load Balancer (ELB)
+
+In the cloud, your web instances are forever changing. This Gem allows you to define in
+your cap file that a host is using an ELB and it will detect the EC2 instances and deploy
+your app to each of them.
 
 ## Installation
 
@@ -18,7 +22,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your `deploy.rb`
+
+    require 'elbow/capistrano'
+
+`elbow` requires your aws credentials, set them in your `deploy.rb`
+
+    set :aws_access_key_id, 'YOUR_ACCESS_KEY_ID'
+    set :aws_secret_access_key, 'YOUR_SECRET_ACCESS_KEY'
+
+Tell `elbow` that a host is using an ELB by specifying the `elastic_load_balancer`
+configuration in in your `deploy.rb`. The first argument is the host name followed
+by a list of roles.
+
+    elastic_load_balancer [host_name], :app, :web
+
+The host_name is expected to be a CNAME for the ELB public DNS, as such a DNS looked is
+performed against the host name.
 
 ## Contributing
 
