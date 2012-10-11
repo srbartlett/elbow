@@ -35,9 +35,9 @@ Tell `elbow` that a host is using an ELB by specifying the `elastic_load_balance
 configuration in in your `deploy.rb`. The first argument is the host name followed
 by a list of roles.
 
-    elastic_load_balancer [host_name], :app, :web
+    elastic_load_balancer example.com, :app, :web
 
-The host_name is expected to be a CNAME for the ELB public DNS, as such a DNS looked is
+The host name is expected to be a CNAME for the ELB public DNS, as such a DNS looked is
 performed against the host name.
 
 ## Contributing
