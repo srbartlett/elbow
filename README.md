@@ -40,6 +40,12 @@ by a list of roles.
 The host name is expected to be a CNAME for the ELB public DNS, as such a DNS looked is
 performed against the host name.
 
+By default the ELB is assumed to be in the AWS region `us-east-1`. You can use a
+different region by setting the following in your `deploy.rb`
+
+    set :aws_region, 'ap-southeast-2'
+
+
 ## Contributing
 
 1. Fork it
