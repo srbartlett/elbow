@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Capistrano plugin for deploying to an AWS Elastic Load Balancer}
   gem.summary       = %q{Use this gem as a plugin to Capistrano to deploy to EC2 instances behind an Elastic Load Balancer}
   gem.homepage      = "https://github.com/srbartlett/elbow"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

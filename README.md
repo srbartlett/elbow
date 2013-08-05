@@ -46,6 +46,10 @@ different region by setting the following in your `deploy.rb`
     set :aws_region, 'ap-southeast-2'
 
 
+## License
+
+elbow is MIT licensed
+
 ## Contributing
 
 1. Fork it
