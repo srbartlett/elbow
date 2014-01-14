@@ -34,7 +34,7 @@ In your `deploy.rb`
     set :aws_secret_access_key, 'YOUR_SECRET_ACCESS_KEY'
 
 Tell `elbow` that a host is using an ELB by specifying the `elastic_load_balancer`
-configuration in in your `deploy.rb`. The first argument is the host name followed
+configuration in in your `config/deploy/yourstage.rb`. The first argument is the host name followed
 by a list of roles.
 
     elastic_load_balancer 'your-elb-100028747657.us-east-1.elb.amazonaws.com', roles: %w{web app}, user: 'youruser'
