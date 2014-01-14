@@ -24,11 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-In your `deploy.rb`
+In your `config/deploy/yourstage.rb`
 
     require 'elbow/capistrano'
 
-`elbow` requires your aws credentials, set them in your `deploy.rb`
+`elbow` requires your aws credentials, set them in your `config/deploy/yourstage.rb`
 
     set :aws_access_key_id, 'YOUR_ACCESS_KEY_ID'
     set :aws_secret_access_key, 'YOUR_SECRET_ACCESS_KEY'
@@ -43,7 +43,7 @@ The host name is expected to be a CNAME for the ELB public DNS, as such a DNS lo
 performed against the host name.
 
 By default the ELB is assumed to be in the AWS region `us-east-1`. You can use a
-different region by setting the following in your `deploy.rb`
+different region by setting the following in your `config/deploy/yourstage.rb`
 
     set :aws_region, 'ap-southeast-2'
 
