@@ -28,7 +28,7 @@ Capistrano::Configuration.instance(:must_exist).load do
         hostnames.each { |h| server(h, *options[:all]) }
       end
       if options.key?(:first)
-        server(hostnames.first, options[:first])
+        server(hostnames.first, *options[:first])
       end
     else
       hostnames.each { |h| server(h, *args) }
