@@ -6,7 +6,7 @@ In the cloud, your web instances are forever changing. This Gem allows you to de
 your cap file that a host is using an ELB and it will detect the EC2 instances and deploy
 your app to each of them.
 
-** Version 0.0.4 and above require Capistrano 3 and are not backwards compatible **
+** Version 0.0.4 and above support Capistrano 3 **
 
 ## Installation
 
@@ -27,6 +27,10 @@ Or install it yourself as:
 In your `config/deploy/yourstage.rb`
 
     require 'elbow/capistrano'
+
+**Important** if you are using Capistrano version 2 then:
+
+    require 'elbow/capistrano_v2'
 
 `elbow` requires your aws credentials, set them in your `config/deploy/yourstage.rb`
 
