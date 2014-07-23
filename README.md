@@ -42,6 +42,11 @@ configuration in in your `config/deploy/yourstage.rb`. The first argument is the
 by a list of roles.
 
     elastic_load_balancer 'your-elb-100028747657.us-east-1.elb.amazonaws.com', roles: %w{web app}, user: 'youruser'
+    
+**Important** if you are using Capistrano version 2 then:
+
+    elastic_load_balancer 'your-elb-100028747657.us-east-1.elb.amazonaws.com', :app, :web
+
 
 The host name is expected to be a CNAME for the ELB public DNS, as such a DNS looked is
 performed against the host name.
